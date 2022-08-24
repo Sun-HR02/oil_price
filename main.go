@@ -14,7 +14,7 @@ func main() {
 	go func() {
 		model.UpdatePrices()
 		for {
-			time.Sleep(24 * 60 * time.Second)
+			time.Sleep(24 * 60 * 60 * time.Second)
 			log.Println("Oil prices updated")
 			model.UpdatePrices()
 		}

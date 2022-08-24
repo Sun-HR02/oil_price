@@ -4,4 +4,4 @@ mysql:
   dbpasswd: hanjinhao
 
 app:
-  port: 80
+  port: 9000
