@@ -2,6 +2,8 @@ package main
 
 import (
 	"log"
+	"oil_price_show/conf"
+	"oil_price_show/middleware"
 	"oil_price_show/model"
 	"oil_price_show/web"
 	"time"
@@ -13,11 +15,17 @@ func main() {
 		model.UpdatePrices()
 		for {
 			time.Sleep(24 * 60 * time.Second)
-			log.Println("A day passed. Update prices.")
+			log.Println("Oil prices updated")
 			model.UpdatePrices()
 		}
 	}()
 
-	r.Run(":8080")
+	r.Use(middleware.Cors())
+
+	appPort := conf.AppPort()
+	err := r.Run(":" + appPort)
+	if err != nil {
+		log.Println(err)
+	}
 
 }

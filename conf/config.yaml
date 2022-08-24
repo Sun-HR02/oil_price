@@ -1,0 +1,7 @@
+mysql:
+  dburl: localhost
+  dbport: 3306
+  dbpasswd: hanjinhao
+
+app:
+  port: 80
