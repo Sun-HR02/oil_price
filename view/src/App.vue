@@ -3,18 +3,23 @@
   <div class="root">
   <div class="common-layout">
     <el-container>
-      <el-header class="component">
+      <el-header class="component" style="background-color: #E6A23C">
         <h1 class="title">Sun Haoran的个人主页</h1>
       </el-header>
       <el-main>
+
+        <div class="Carousel">
+          <carousel-show></carousel-show>
+        </div>
+
         <div class="oil" style="width: 28%; float: left">
-          <el-card class="box-card">
+          <el-card class="box-card" shadow="always">
             <index-oil class="component"></index-oil>
           </el-card>
         </div>
 
         <div class="time" style="float: left; width: 50%">
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="always">
         <time-now></time-now>
         </el-card>
         </div>
@@ -30,10 +35,12 @@
 <script>
 import IndexOil from "@/components/oilPrice";
 import TimeNow from "@/components/timeNow";
+import CarouselShow from "@/components/carouselShow";
 
 export default {
   name: 'App',
   components: {
+    CarouselShow,
     TimeNow,
     IndexOil
   }
@@ -53,12 +60,11 @@ export default {
   left: 0px;
   right: 0px;
   position: absolute;
-  background: antiquewhite;
+  background-color:#CFD3DC;
 }
 .title{
-  background: rgba(63, 60, 60, 0.5);
   margin: 0;
-  top: 0;
+  top: 20%;
   left: 0;
   right: 0;
   bottom: 0;

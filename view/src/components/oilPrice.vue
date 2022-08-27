@@ -1,5 +1,5 @@
 <template>
-  <div id="root">
+  <div id="root" style="background-color: #E5EAF3">
    <div id="header">
      今日油价
    </div>
