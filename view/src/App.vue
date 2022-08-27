@@ -7,14 +7,17 @@
         <h1 class="title">Sun Haoran的个人主页</h1>
       </el-header>
       <el-main>
-        <div class="oil" style="width: 28%">
+        <div class="oil" style="width: 28%; float: left">
           <el-card class="box-card">
             <index-oil class="component"></index-oil>
           </el-card>
         </div>
 
-
-
+        <div class="time" style="float: left; width: 50%">
+        <el-card class="box-card">
+        <time-now></time-now>
+        </el-card>
+        </div>
 
 
       </el-main>
@@ -26,10 +29,12 @@
 
 <script>
 import IndexOil from "@/components/oilPrice";
+import TimeNow from "@/components/timeNow";
 
 export default {
   name: 'App',
   components: {
+    TimeNow,
     IndexOil
   }
 }
@@ -48,7 +53,7 @@ export default {
   left: 0px;
   right: 0px;
   position: absolute;
-  background: rgba(23, 22, 22, 0.9);
+  background: antiquewhite;
 }
 .title{
   background: rgba(63, 60, 60, 0.5);
